@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main>
+
+
+    <h1>IP Address Tracker</h1>
+
+    <div class="inptBox">
+      <input type="text" id="inpt" placeholder="Search for any IP address or Domain"></input>
+      <div class="bt" id="bttn"></div>
+    </div>
+
+    <div class="box">
+      <div class="dataBox">
+        <p>IP Address</p>
+        <span id="address">----</span>
+      </div>
+      <div class="dataBox">
+        <p>Location</p>
+        <span id="location">----</span>
+      </div>
+      <div class="dataBox">
+        <p>Timezone</p>
+        <span>UTC </span><span id="timezone">----</span> <!-- add offset value dynamically using the API -->
+      </div>
+      <div class="dataBox">
+        <p>ISP</p>
+        <span id="isp">----</span>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="mapid"></div>
+</body>
+
+</html>

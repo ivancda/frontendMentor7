@@ -11,10 +11,12 @@ var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(mymap);
-
-button.addEventListener('click', function(){
   let locAll = {}
+button.addEventListener('click', function(){
+  search()
+})
 
+function search(){
   //DOM
   let inpt = document.getElementById('inpt').value
   let adres = document.getElementById('address')
@@ -22,7 +24,6 @@ button.addEventListener('click', function(){
   let timez = document.getElementById('timezone')
   let isp = document.getElementById('isp')
   //DOM END
-  
   const fetchIP = () => {
     const url = `https://geo.ipify.org/api/v1?apiKey=at_WkjMR2MQLlRvQW4YNrpMpEjaohOoL&ipAddress=${inpt}&domain=${inpt}`
 
@@ -38,6 +39,6 @@ button.addEventListener('click', function(){
         mymap.setView(latLangV, 14)
       })
   }
-
   fetchIP()
-})
+}
+search()

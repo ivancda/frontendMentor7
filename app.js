@@ -26,7 +26,6 @@ function search(){
   //DOM END
   const fetchIP = () => {
     const url = `https://geo.ipify.org/api/v1?apiKey=at_WkjMR2MQLlRvQW4YNrpMpEjaohOoL&ipAddress=${inpt}&domain=${inpt}`
-
     fetch(url)
       .then(response => response.json())
       .then(loc => {
